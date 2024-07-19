@@ -7,8 +7,8 @@ from sklearn.datasets import load_iris
 target_names = load_iris().target_names
 
 app = FastAPI()
-rf_model = load('https://github.com/vasantharan/fastapi/tree/main/api/Random_Forest.joblib')
-knn_model = load('https://github.com/vasantharan/fastapi/tree/main/api/KNN.joblib')
+rf_model = load('./api/Random_Forest.joblib')
+knn_model = load('./api/KNN.joblib')
 
 class input(BaseModel):
     features: list
